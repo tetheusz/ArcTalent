@@ -1,0 +1,142 @@
+.applyLayout {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  padding: 6rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.inputGroup input, .inputGroup textarea {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1rem;
+  border-radius: 0;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: var(--font-main);
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus, .inputGroup textarea:focus {
+  outline: none;
+  border-color: rgba(0, 229, 255, 0.35);
+  background: rgba(0, 229, 255, 0.03);
+  box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.04);
+}
+
+.inputGroup input::placeholder, .inputGroup textarea::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoCard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+}
+
+.infoCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.infoCard p {
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.65;
+  font-size: 0.9rem;
+}
+
+.infoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.infoList li::before {
+  content: '→';
+  color: #00E5FF;
+  margin-right: 0.75rem;
+}
+
+.successCard {
+  max-width: 600px;
+  margin: 10rem auto;
+  text-align: center;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0;
+}
+
+.successIcon {
+  margin-bottom: 2rem;
+}
+
+.successCard h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.successCard p {
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .applyLayout {
+    grid-template-columns: 1fr;
+  }
+}

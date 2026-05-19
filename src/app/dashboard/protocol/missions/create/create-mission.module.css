@@ -1,0 +1,120 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 4rem;
+  padding: 4rem 0 8rem;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.sub {
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.inputGroup input, .inputGroup textarea, .inputGroup select {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--bg-surface);
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+}
+
+.checkboxGroup label {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoCard {
+  padding: 2rem;
+}
+
+.infoCard h3 {
+  font-size: 1.125rem;
+  margin: 1rem 0;
+}
+
+.infoCard p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.infoCard ul {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.successCard {
+  max-width: 600px;
+  margin: 10rem auto;
+  text-align: center;
+  padding: 4rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+}
+
+.successCard h1 {
+  margin-bottom: 1rem;
+}
+
+.successCard p {
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,513 @@
+.landing {
+  position: relative;
+  width: 100%;
+  background: #020818;
+  overflow-x: hidden;
+}
+
+/* ── Side Navigation ── */
+.sideNav {
+  position: fixed;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sideNavItem {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.sideNavItem:hover { color: rgba(255, 255, 255, 0.5); }
+.active { color: rgba(255, 255, 255, 0.85); }
+.sideNavDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+}
+
+/* ── Hero Section ── */
+.hero {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.heroTitle {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 80px rgba(0, 229, 255, 0.12);
+}
+
+.heroSub {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.ctaBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 229, 255, 0.35);
+  color: white;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.08);
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.95rem 2.5rem;
+  background: white;
+  color: #020818;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaBtnPrimary:hover {
+  background: #00E5FF;
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.2);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.2);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ── Dark Sections ── */
+.sectionDark {
+  position: relative;
+  z-index: 10;
+  background: #020818;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sectionInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 4vw;
+}
+
+.sectionLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #00E5FF;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.sectionSub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.4);
+  max-width: 500px;
+  margin-bottom: 3.5rem;
+  line-height: 1.6;
+}
+
+/* ── Steps Grid ── */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stepCard {
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stepCard:hover {
+  border-color: rgba(0, 229, 255, 0.2);
+  background: rgba(0, 229, 255, 0.03);
+}
+
+.stepNumber {
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+  line-height: 1;
+}
+
+.stepIcon {
+  color: #00E5FF;
+  margin-bottom: 1.5rem;
+}
+
+.stepCard h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.stepCard p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.6;
+}
+
+/* ── Bento Grid ── */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.bentoCard {
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.015);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bentoCard:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.bentoLarge {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.bentoWide {
+  grid-column: 1 / 4;
+}
+
+.bentoIcon {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+.bentoCard h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.bentoCard p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.65;
+}
+
+.bentoGlow {
+  position: absolute;
+  bottom: -50%;
+  right: -30%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Stats ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Protocol Section ── */
+.protocolSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.protocolLeft { }
+
+.protocolDesc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.protocolFeatures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.protocolFeatures li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+.featureDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #00E5FF;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Terminal Card ── */
+.terminalCard {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminalDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminalTitle {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.terminalBody {
+  padding: 1.5rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+.terminalLine {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.terminalPrompt {
+  color: #00E5FF;
+  margin-right: 0.5rem;
+}
+
+.terminalAccent {
+  color: #00E5FF;
+}
+
+.terminalSuccess {
+  color: #10b981;
+}
+
+/* ── Final CTA ── */
+.ctaSection {
+  position: relative;
+  z-index: 10;
+  background: #020818;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.ctaContent {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 229, 255, 0.02);
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.ctaSub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2.5rem;
+}
+
+.ctaActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ── Bottom Bar ── */
+.bottomBar {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: #020818;
+}
+
+.bottomLeft, .bottomRight, .bottomCenter {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+}
+
+.bottomCenter { color: rgba(255, 255, 255, 0.15); }
+
+.statusDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.bottomLink {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bottomLink:hover { color: white; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .sideNav { display: none; }
+  .stepsGrid { grid-template-columns: 1fr; }
+  .bentoGrid { grid-template-columns: 1fr; }
+  .bentoLarge, .bentoWide { grid-column: auto; grid-row: auto; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .protocolSection { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .heroTitle { font-size: 2rem; }
+  .sectionInner { padding: 4rem 1.5rem; }
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+  .ctaActions { flex-direction: column; }
+  .bottomBar { padding: 1rem 1.5rem; }
+}

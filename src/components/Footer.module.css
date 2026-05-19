@@ -1,0 +1,110 @@
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  padding: 5rem 0 3rem;
+  margin-top: 8rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.left {
+  max-width: 300px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.logoIcon {
+  width: 28px;
+  height: 28px;
+  background: var(--accent-primary);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.left p {
+  color: var(--text-dim);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  gap: 5rem;
+}
+
+.linkGroup h4 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkGroup a {
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  transition: color 0.2s ease;
+}
+
+.linkGroup a:hover {
+  color: var(--accent-primary);
+}
+
+.bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+.socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socials a:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .links {
+    gap: 3rem;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

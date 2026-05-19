@@ -1,0 +1,251 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 4rem;
+  padding: 4rem 0 8rem;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--text-primary);
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.protocolInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.protocolName {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 2rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list li {
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.75rem;
+}
+
+.list li::before {
+  content: '→';
+  color: var(--accent-primary);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rewardCard, .protocolCard {
+  padding: 2rem;
+}
+
+.rewardCard h3, .protocolCard h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.rewardValue {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.rewardCard p {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 1.5rem 0;
+}
+
+.faucetNote {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  background: rgba(0, 242, 255, 0.05);
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.protocolCard p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.protocolLink {
+  color: var(--accent-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.notFound {
+  text-align: center;
+  padding: 10rem 0;
+}
+
+.notFound h1 {
+  margin-bottom: 1rem;
+}
+
+.notFound p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.submissionFormOverlay {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.submissionForm h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.requirementsHint {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+}
+
+.reqText {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  font-family: inherit;
+  color: var(--accent-primary);
+}
+
+.textarea {
+  width: 100%;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.textarea:focus {
+  border-color: var(--accent-primary);
+  outline: none;
+}
+
+.formActions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.75rem;
+}
+
+.submissionSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.submissionSuccess p {
+  font-weight: 600;
+  color: var(--accent-success);
+}
+
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    order: -1;
+  }
+}

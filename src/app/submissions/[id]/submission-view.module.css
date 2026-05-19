@@ -1,0 +1,145 @@
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin: 2rem 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  padding-bottom: 5rem;
+}
+
+.header {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statusBadge.pending { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.statusBadge.approved { background: rgba(16, 185, 129, 0.1); color: var(--accent-success); }
+
+.header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 2rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.contentSection {
+  padding: 2rem;
+}
+
+.contentSection h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.evidenceContainer {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  color: var(--text-primary);
+}
+
+.linksSection {
+  margin-top: 3rem;
+}
+
+.linksSection h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linksGrid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.statusCard, .rewardCard {
+  padding: 1.5rem;
+}
+
+.statusCard h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.statusInfo p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.rewardCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rewardCard label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.rewardCard span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

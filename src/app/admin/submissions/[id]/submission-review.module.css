@@ -1,0 +1,215 @@
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  margin: 2rem 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.header {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statusBadge.pending { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.statusBadge.approved { background: rgba(16, 185, 129, 0.1); color: var(--accent-success); }
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 2rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.contentSection {
+  padding: 2rem;
+}
+
+.contentSection h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.evidenceText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.linksSection {
+  margin-top: 3rem;
+}
+
+.linksSection h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  transition: all 0.2s;
+}
+
+.linkCard:hover {
+  border-color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.actionCard, .missionCard {
+  padding: 1.5rem;
+}
+
+.actionCard h3, .missionCard h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.actionCard p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.commentInput {
+  width: 100%;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  min-height: 100px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.approveFull {
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--accent-success);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.rejectFull {
+  width: 100%;
+  padding: 0.875rem;
+  background: transparent;
+  color: var(--accent-error);
+  border: 1px solid var(--accent-error);
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.missionBrief {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.rewardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewardInfo label { font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); }
+.rewardInfo span { font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); }
+
+.finalStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 12px;
+  color: var(--accent-success);
+  font-weight: 700;
+}

@@ -1,0 +1,105 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 2rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  padding: 0.9rem 1.5rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+}
+
+.logoText {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: white;
+  font-family: var(--font-main);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.menuBtn:hover {
+  background: white;
+}
+
+.dots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+
+.dots span {
+  width: 4px;
+  height: 4px;
+  background: #000;
+  border-radius: 1px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.75rem 1rem;
+  }
+  .inner {
+    padding: 0.6rem 1rem;
+  }
+  .logoText {
+    font-size: 0.9rem;
+  }
+}
